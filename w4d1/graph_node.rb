@@ -49,4 +49,3 @@ f.neighbors = [e]
 p bfs(a,'d')
 # p bfs(a,'f') # infinite loop
 p bfs_with_set(a,'f')
-p bfs_with_set(a,'z')
