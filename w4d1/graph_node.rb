@@ -1,3 +1,5 @@
+require 'set'
+
 class GraphNode
 
     attr_reader :value
@@ -22,14 +24,14 @@ end
 
 def bfs_with_set(starting_node, target_value) #bfs(target_value)
     # checked = Set[ starting_node.value ] # i'll review this and ask a question in class maybe
-    checked = []
+    checked = Set.new
     queue = [ starting_node ]
     until queue.empty?
         node = queue.shift
         return node if target_value == node.value
         node.neighbors.each do |neighbor| 
             queue << neighbor if !checked.include?(neighbor.value)
-            checked << neighbor.value
+            checked.add(neighbor.value)
         end
     end
     nil
