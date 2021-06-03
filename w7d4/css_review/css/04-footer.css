@@ -1,17 +1,14 @@
 /* PHASE 4: Footer */
 
-.header {
-  /* background: blue; */
-  border-right: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-}
+.footer {  
+  /* padding: 20px;
+  width: 860px; */
+  margin: 0 auto 50px auto;
+  width: 900px;
 
-.footer {
   background: white;
   font-size: 14px;
   color: #aaa;
-  padding: 20px;
-  width: 860px;
   margin: auto;
   border-bottom: 1px solid #ccc;
   border-left: 1px solid #ccc;
@@ -19,21 +16,23 @@
 }
 
 .footer-copy {
+  padding: 20px;
   float: left;
 }
 
 .footer-links {
   float: right;
-  padding: 
+  padding: 20px;
 }
 
 .footer-links > li {
   float: left;
-  margin-right: 20px;
+  padding: 0 0 0 20px;
+  /* margin-right: 20px; */
 }
 
 .footer a {
-
+  display: block;
 }
 
 .footer a:hover {

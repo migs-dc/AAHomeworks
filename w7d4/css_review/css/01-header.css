@@ -5,7 +5,6 @@ body {
   font-family: sans-serif;
   font-size: 16px;
   font-weight: 400;
-
   background: #eee;
 }
 
@@ -18,14 +17,15 @@ body {
 .header a {
   display: block;
   /* not sure about this part */
-  padding: 10px;
-  padding-left: 20px;
+  padding: 10px 20px;
+  /* padding: 10px;
+  padding-left: 20px; */
 }
 
 .header-nav {
+  /* margin: auto; */
+  margin: 0 auto;
   width: 900px;
-  margin: auto;
-  /* seems to be brighter */
   border-left: 1px solid white;
   border-right: 1px solid white;
 
