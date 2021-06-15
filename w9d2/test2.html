@@ -1,0 +1,27 @@
+<div>
+  <ul id="play-list">
+    <li>The Importance of Being Earnest</li>
+    <li>Hamilton</li>
+    <li>As You Like It</li>
+  </ul>
+  <li>My Fair Lady</li>
+  <ol id="delete-me"></ol>
+</div>
+
+<script>
+  // `querySelector` returns the FIRST element to match the css selector
+  const ul = document.querySelector("ul");
+  // this is the first element that is a child of the ul (the first li)
+  const firstLi = ul.children[0];
+  // `querySelector` and `querySelectorAll` can utilize complex css selectors
+  const lastPlay = document.querySelector("div > li");
+
+  // Adds this text after the current contents of the li
+  firstLi.append(" - Oscar Wilde")
+  // Append the lastPlay li to the end of the ul
+  // Append moves elements that are already on the page rather than duplicating them
+  
+  ul.append(lastPlay)
+  // Find the element with the id "ordered" and remove it from the DOM
+  document.getElementById("delete-me").remove()
+</script>

@@ -1,0 +1,60 @@
+<!-- creating sheep -->
+<!-- <ul id='sheep'></ul> 
+
+<form id='sheep-form'>
+  <label for='sheep-name'>Name</label>
+  <input type='text' name='sheep[name]' id='sheep-name'>
+
+  <button>'Create sheep!'</button>
+</form>
+
+<script>
+  const sheepForm = document.getElementById('sheep-form');
+
+  sheepForm.addEventListener('submit', event => {
+    // *cancel default behavior for this event*
+    // if we don't include this line, the browser will do what it normally does
+    // when you submit a form: make an HTTP request, causing a full page refresh
+    event.preventDefault();
+
+    // Get the name input element, get the value, and clear it.
+    const sheepNameInput = document.getElementById('sheep-name')
+    const sheepName = sheepNameInput.value;
+    sheepNameInput.value = '';
+
+    // Add a new li with the sheep's name to the sheep ul.
+    const ul = document.getElementById('sheep');
+    const li = document.createElement('li');
+    li.textContent = sheepName;
+    ul.appendChild(li);
+  });
+</script> -->
+
+<button id='count-btn'>Count sheep!</button>
+<button id='toggle-count-btn'>Stop counting sheep!</button>
+
+<p>You've counted to <span id='click-count'>0</span> sheep!</p>
+
+<script>
+  const countButton = document.getElementById('count-btn');
+  const toggleCountButton = document.getElementById('toggle-count-btn');
+  const countSpan = document.getElementById('click-count');
+
+  const clickHandler = event => {
+    let curCount = parseInt(countSpan.innerText); // get current count from span
+    countSpan.innerText = curCount + 1; // increment count by 1
+  }
+
+  let stopped = false; // whether counting is currently stopped
+  countButton.addEventListener('click', clickHandler);
+  toggleCountButton.addEventListener('click', event => {
+    if (stopped) { // we're currently stopped; add listener to start counting
+      countButton.addEventListener('click', clickHandler);
+      toggleCountButton.innerText = 'Stop counting sheep!';
+    } else { // otherwise stop counting by removing event listener
+      countButton.removeEventListener('click', clickHandler);
+      toggleCountButton.innerText = 'Resume counting sheep!';
+    }
+    stopped = !stopped;
+  });
+</script>
