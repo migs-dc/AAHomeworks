@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // adding SF places as list items
 
-  // --- your code here!
+  
 
 
 
